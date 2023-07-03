@@ -47,11 +47,6 @@ const userSchema = Schema(
       enum: ["student", "teacher", "admin"],
       default: "student",
     },
-    status: {
-      type: String,
-      enum: ["disabled", "verified", "pending"],
-      default: "pending",
-    },
   },
   {
     timestamps: true,
@@ -87,4 +82,4 @@ userSchema.methods.comparePassword = function (password,hash)  {
   }
 const User = model("User", userSchema);
 
-module.exports = User;
+export default User
