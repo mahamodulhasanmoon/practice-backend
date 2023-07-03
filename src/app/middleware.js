@@ -6,7 +6,10 @@ import express  from 'express';
 const middleware = [
     morgan('dev',
     cors(),
-    express.json())
+    express.json(),
+    express.urlencoded({ extended:true}),
+    
+    )
 ]
 
 export default middleware;

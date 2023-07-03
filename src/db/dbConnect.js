@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const dbConnect = (connectStr)=>{
+const dbConnect = (connectStr) => {
 
     return mongoose.connect(connectStr);
 
