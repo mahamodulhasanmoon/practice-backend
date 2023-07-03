@@ -5,6 +5,6 @@ import { createUser } from "../controllers/authController.js";
 
 const authRoutes = express.Router();
 
-authRoutes.get('/register',createUser)
+authRoutes.post('/register',createUser)
 
 export default authRoutes

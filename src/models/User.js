@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 import validator from "validator";
 import bcrypt from 'bcrypt'
 
@@ -6,7 +6,7 @@ const userSchema = Schema(
   {
     name: {
       type: String,
-      required: [true, "Please provide a first name"],
+      required: [true, "Please provide your Name"],
       trim: true,
       minLength: [3, "Name must be at least 3 characters."],
       maxLength: [100, "Name is too large"],
@@ -47,9 +47,6 @@ const userSchema = Schema(
       enum: ["student", "teacher", "admin"],
       default: "student",
     },
-  },
-  {
-    timestamps: true,
   }
 );
 // middlewares 
